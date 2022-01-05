@@ -17,6 +17,7 @@ namespace WinForms6464
 
             // Set up conditions for the bug...
             BaseForm.EnableOpacityGlobally = false;
+            BaseForm.DontCallIsHandleCreatedInCriticalPlaces = true;
 
             Application.Run(new MainForm());
         }
