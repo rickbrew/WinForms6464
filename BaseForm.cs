@@ -145,14 +145,13 @@ namespace WinForms6464
             }
         }
 
+        // 'true' to recreate the bug, 'false' to fix things
+        public static bool DontCallIsHandleCreatedInCriticalPlaces { get; set; }
+
         // Called in places where I was _not_ calling it before. Change to 'return true;' to recreate the bug
         private bool IsHandleCreatedOld
         {
-            // Everything works fine
-            //get => this.IsHandleCreated;
-
-            // All heck breaks loose
-            get => true;
+            get => DontCallIsHandleCreatedInCriticalPlaces ? true : this.IsHandleCreated;
         }
     }
 }
