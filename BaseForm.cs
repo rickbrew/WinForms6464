@@ -36,7 +36,6 @@ namespace WinForms6464
             this.Font = SystemFonts.MenuFont;
             this.AutoScaleDimensions = new SizeF(96F, 96F);
             this.AutoScaleMode = AutoScaleMode.Dpi;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.ResumeLayout(false);
         }
 
